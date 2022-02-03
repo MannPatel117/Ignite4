@@ -2,7 +2,7 @@
 {
     margin: 0;
     padding: 0;
-    
+    -webkit-font-smoothing: antialiased;
 }
 
 html,
@@ -105,15 +105,58 @@ background-blend-mode: overlay, normal, overlay, color-burn, screen, overlay, di
     margin-top: 4%;
     
 }
-.hero-7{
-    
-    text-align: center;
+
+.hero-btn{
+    margin-top: 4%;
+    height: 50px;
+    position: relative;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-content: center;
 }
-
-
-
+.hero-btn:hover .glow-btn{
+    
+    opacity: 1;
+    transform: scale(1.3);
+    transition: 1s ease-in-out;
+}
+.glow-btn{
+    position: absolute;
+    /* left: 0; */
+    width: 200px;
+    height: 50px;
+    border-radius: 4px;
+    filter: blur(20px);
+    background: rgba(158,26,255,.71023);
+    opacity: 0;
+    z-index: 2;
+    transform: scale(.1);
+    transition: 2s ease-in;
+}
+.bg-btn{
+    position: absolute;
+    background: linear-gradient(96.66deg,#3e00d3 -10.4%,#c440ff 84.6%);
+    transition: 1s ease-in-out;
+    width: 200px;
+    height: 50px;
+    border-radius: 4px;
+    filter: blur(20px);
+    z-index: 3;
+}
+.hero-btn:hover .bg-btn{
+    filter: blur(1px);
+    
+}
+.register-text{
+    position: absolute;
+    top: 14px;
+    font-family: 'Gotham', sans-serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: #FFF;
+    width: 150px;
+    z-index: 4;
+}
 .lp-right{
     height: 100%;
     width: 100%;
@@ -266,11 +309,12 @@ background-blend-mode: overlay, normal, overlay, color-burn, screen, overlay, di
 }
 .moon{
     display: relative;
-    justify-content: cen;
+    justify-content: center;
     background-image: url("assets/moon.svg");
     background-repeat: no-repeat;
-    height: 11%;
-    width: 10%;
+    height: 20%;
+    width: 20%;
+    margin-left: 10%;
     z-index: 1;
 }
 .events-text{
@@ -287,15 +331,18 @@ background-blend-mode: overlay, normal, overlay, color-burn, screen, overlay, di
     z-index: 10;
 }
 .events-cards{
-    height: 100vh;
+    height: auto;
     overflow: hidden;
     background-color: #070608;
 }
 .events-row{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    z-index: 10;
+    z-index: 999999999999;
+    margin-top: 2%;
+    margin-bottom: 2%;
     height: 100%;
     width: 100%;
 }
@@ -308,6 +355,56 @@ background-blend-mode: overlay, normal, overlay, color-burn, screen, overlay, di
     z-index: 1;
 }#stars3{
     z-index: 1;
+}
+
+/* SPONSORS CSS */
+
+.sponsors{
+    height: auto;
+    background: linear-gradient(#070608, #160d00); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.blank-space{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cave-upper-wrapper{
+    height: 1500px;
+    width: 400px;
+    background: url(assets/cave-bg.svg);
+    background-repeat: no-repeat;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    background-position: center;
+}
+.sponsor-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.75;
+    margin-bottom: 50px;
+}
+.sponsor-logo:hover{
+    opacity: 1;
+    transform: translateY(-5px);
+}
+.sponsors-end{
+    height: 140px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.5;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 @media (orientation: portrait) 
 {
@@ -396,12 +493,16 @@ background-blend-mode: overlay, normal, overlay, color-burn, screen, overlay, di
 .events-row{
     flex-direction: column;
 }
-.events-cards{
-    height: 200vh;
-}
+
+.hero-btn{
+    filter: blur(0px);
 }
 
+}
 
+.card{
+    margin-top: 10%;
+}
 .flex{
     display: flex;
     gap: var(--gap, 1.5rem);
@@ -416,16 +517,16 @@ background-blend-mode: overlay, normal, overlay, color-burn, screen, overlay, di
         height: 5rem;
         width: 10rem;
     }
-    .events-cards{
-        height: 300vh;
-    }
+    
 }
 @media (max-width: 376px) {
     .harry{
-        display: none;
+        width: 12rem;
+        height: 3rem;
     }
     .harry2{
-        display: none;
+        width: 12rem;
+        height: 3rem;
     }
     .img-logo-1{
         height: 2rem;
@@ -449,9 +550,7 @@ background-blend-mode: overlay, normal, overlay, color-burn, screen, overlay, di
     .moon{
         margin-top: 25%;
     }
-    .events-cards{
-        height: 400vh;
-    }
+    
 }
 
 @-webkit-keyframes AnimationName {
