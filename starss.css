@@ -1,0 +1,20 @@
+
+
+.blink1 {
+    animation: blinker1 1s linear infinite;
+}
+.blink2 {
+    animation: blinker1 2s linear infinite;
+}
+.blink3 {
+    animation: blinker1 3s linear infinite;
+}
+@keyframes blinker1 {
+    50% { opacity: 0; }
+}
+/* @keyframes blinker2 {
+    40% { opacity: 0; }
+}
+@keyframes blinker3 {
+    60% { opacity: 0; }
+} */
