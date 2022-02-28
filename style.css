@@ -128,7 +128,12 @@ background-blend-mode: overlay, normal, overlay, color-burn, screen, overlay, di
     align-items: center;
     margin-top: 3%;
 }
-
+.hero-1{
+    display: flex;
+}
+.hero-1:hover{
+    transform: translateY(-5px);
+}
 .hero-2{
     font-family: 'Gotham Light', sans-serif;
     font-weight: 600;
@@ -453,7 +458,7 @@ background-blend-mode: overlay, normal, overlay, color-burn, screen, overlay, di
     align-items: center;
 }
 .cave-upper-wrapper{
-    height: 1500px;
+    height: 2000px;
     width: 400px;
     background: url(assets/cave-bg.svg);
     background-repeat: no-repeat;
