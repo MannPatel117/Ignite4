@@ -1,6 +1,8 @@
 *
 {
-    
+    -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
     margin: 0;
     padding: 0;
     -webkit-font-smoothing: antialiased;
@@ -112,7 +114,7 @@ header ul{
 }
 .primary-navigation li:hover{
     transform: translateY(-2px);
-    text-shadow: 0 0 3px #007A7A, 0 0 5px #007A7A;
+    
 }
 .landing-page{
     display: flex;
@@ -184,6 +186,8 @@ background-blend-mode: overlay, normal, overlay, color-burn, screen, overlay, di
     width: 200px;
     height: 50px;
     border-radius: 4px;
+    -webkit-filter: blur(20px);
+    -moz-filter: blur(20px);
     filter: blur(20px);
     background: rgba(158,26,255,.71023);
     opacity: 0;
@@ -496,6 +500,7 @@ background-blend-mode: overlay, normal, overlay, color-burn, screen, overlay, di
     background: linear-gradient(#160d00,#070608);
     height: auto;
 }
+
 .teams-wrapper{
     display: table;
     display: flex;
@@ -529,14 +534,15 @@ background-blend-mode: overlay, normal, overlay, color-burn, screen, overlay, di
 .tmember{
     height: 200px;
     width: 200px;
-    background: #007A7A;
     margin-bottom: 5%;
     margin-left: 5%;
     margin-right: 5%;
+    
 }
 
 
 .lines {
+    
     position: absolute;
     top: 0;
     left: 0;
@@ -551,7 +557,7 @@ background-blend-mode: overlay, normal, overlay, color-burn, screen, overlay, di
     width: 1px;
     height: 100%;
     top: 0;
-    left: 50%;
+    left: 62.5%;
     background: rgba(255, 255, 255, 0.1);
     overflow: hidden;
   }
